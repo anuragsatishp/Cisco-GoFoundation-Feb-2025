@@ -159,3 +159,4 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ## Functions
 - Can have more than one return result
 - Variadic functions
+- Anonymous functions
