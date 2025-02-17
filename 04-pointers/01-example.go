@@ -15,4 +15,7 @@ func main() {
 	fmt.Println(*noPtr)
 
 	fmt.Println(no == *(&no))
+
+	*noPtr = 200
+	fmt.Println(no)
 }
