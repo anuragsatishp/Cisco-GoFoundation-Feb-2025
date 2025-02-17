@@ -155,3 +155,7 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - if else
 - switch case
 - for
+
+## Functions
+- Can have more than one return result
+- Variadic functions
