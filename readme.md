@@ -160,3 +160,7 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - Can have more than one return result
 - Variadic functions
 - Anonymous functions
+- Higher Order functions
+    - Assign a function as a value to a variable
+    - Pass a function as an argument
+    - Return a function as a return value
