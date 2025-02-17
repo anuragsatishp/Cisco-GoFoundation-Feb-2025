@@ -53,4 +53,16 @@
         - "range" construct
         - "select-case" construct
 
+## Compile 
+```shell
+go build [filename.go]
 
+# OR
+
+go build -o [binary_name] [filename.go]
+```
+
+## Compile & Execute
+```shell
+go run [filename.go]
+```
