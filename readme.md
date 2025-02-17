@@ -150,3 +150,8 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ## IOTA
 - auto-generated constant values for a group of constants
+
+## Constructs
+- if else
+- switch case
+- for
