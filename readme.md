@@ -144,3 +144,6 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
     - Can have "unused" variables
 - Function scope
     - Cannot have "unused" variables
+
+## Constant
+- Can have unused constants even in "function" scope
