@@ -9,8 +9,9 @@ import "fmt"
 /* package init function */
 
 /* main function */
+
 func main() {
-	// print("Hello World!\n")
+	// print("Hello World!")
 	// fmt.Print("Hello World!\n")
 	fmt.Println("Hello World!")
 }
