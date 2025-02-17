@@ -147,3 +147,6 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ## Constant
 - Can have unused constants even in "function" scope
+
+## IOTA
+- auto-generated constant values for a group of constants
