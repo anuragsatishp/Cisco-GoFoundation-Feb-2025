@@ -135,4 +135,12 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ## Variable Declarations
 - Using "var" keyword
+    - Can be used in both function & package scope
 - Using ":="
+    - Can be used ONLY in function scope
+
+## Scope
+- Package scope
+    - Can have "unused" variables
+- Function scope
+    - Cannot have "unused" variables
