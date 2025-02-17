@@ -88,5 +88,4 @@ func main() {
 		XWR = X | W | R
 	)
 	fmt.Printf("%b %b %b %b %b %b\n", X, W, XW, R, WR, XWR)
-
 }
