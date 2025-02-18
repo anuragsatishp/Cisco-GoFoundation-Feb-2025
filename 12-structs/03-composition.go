@@ -48,6 +48,11 @@ func main() {
 	fmt.Println(milk.Id, milk.Name, milk.Cost, milk.Expiry)
 
 	// Use Format() and ApplyDiscount() for milk (PerishableProduct)
+	fmt.Println("before discount")
+	fmt.Println(Format(milk.Product))
+	ApplyDiscount(&milk.Product, 10)
+	fmt.Println("after discount")
+	fmt.Println(Format(milk.Product))
 }
 
 func Format(p Product) string {
