@@ -32,7 +32,9 @@ func main() {
 			Cost: 10,
 		}
 	*/
+	// Not advisable
 	// var product Product = Product{100, "Pen", 10}
+
 	/*
 		var product Product = Product{
 			Id:   100,
