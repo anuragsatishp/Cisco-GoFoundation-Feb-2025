@@ -188,3 +188,11 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
         - errors.New()
         - fmt.Errorf()
     - Custom types that implement "error" interface
+
+## Panic & Recovery
+### Panic
+- represents the state of the application where the application execution is unable to proceed further
+- when a panic occurs, the runtime will attempt to shutdown the application after all the already deferred functions are executed
+- Creating a panic
+    - Use panic()
+    - typically pass and error (that led to the panic) as an argument to panic()
