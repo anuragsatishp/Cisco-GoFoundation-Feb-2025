@@ -5,11 +5,14 @@ import (
 
 	"github.com/tkmagesh/Cisco-GoFoundation-Feb-2025/11-modularity-app/math"
 	/* "github.com/tkmagesh/Cisco-GoFoundation-Feb-2025/11-modularity-app/math/utils" */
+
+	"github.com/fatih/color"
 	ut "github.com/tkmagesh/Cisco-GoFoundation-Feb-2025/11-modularity-app/math/utils"
 )
 
 func main() {
-	fmt.Println("App Executed!")
+	color.Yellow("App Executed!")
+	// fmt.Println("App Executed!")
 	fmt.Println(math.Add(100, 200))
 	fmt.Println(math.Subtract(100, 200))
 	fmt.Println("Operation Count :", math.OpCount())

@@ -215,10 +215,39 @@ go mod init [module_name]
 go run .
 ```
 
-### To create a build
+#### To create a build
 ```shell
 go build .
 ```
+
+#### To import 3rd party modules
+[Code downloaded to $GOPATH/pkg folder]
+```shell
+go get [module-name]
+```
+
+#### To updated the references in the go.mod file
+```shell
+go mod tidy
+```
+
+#### To explicitly download the dependencies
+```shell
+go mod download
+```
+
+#### To localize the dependencies (in a "vendor" folder)
+```shell
+go mod vendor
+```
+#### Other useful mod commands
+```shell
+go mod graph
+go mod why [package-name]
+```
+
+### Reference
+- https://go.dev/ref/mod
 
 ### Package
 - Internal organization of a module
