@@ -172,4 +172,9 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - Fixed sized typed collection
 ### Slice
 - Varying sized typed collection
+- Functions
+    - len
+    - cap
+    - append
+![image](./images/slices.png)
 ### Map

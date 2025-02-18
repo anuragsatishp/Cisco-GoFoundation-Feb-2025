@@ -26,12 +26,22 @@ func main() {
 	}
 
 	// the pointer to the underlying array is copied
-	nos2 := nos
-	nos2[0] = 9999
-	fmt.Printf("nos[0] = %d, nos2[0] = %d\n", nos[0], nos2[0])
+	/*
+		nos2 := nos
+		nos2[0] = 9999
+		fmt.Printf("nos[0] = %d, nos2[0] = %d\n", nos[0], nos2[0])
+	*/
+
+	// use copy() to create a copy
+	fmt.Println("Using copy() to create a copy")
+	newNos := make([]int, len(nos))
+	copy(newNos, nos)
+	newNos[0] = 9999
+	fmt.Printf("nos[0] = %d, newNos[0] = %d\n", nos[0], newNos[0])
 
 	fmt.Println("Slice sort")
 	sort(nos)
+	// fmt.Printf("%p\n", &nos)
 	fmt.Println(nos)
 
 	fmt.Println("slicing")
