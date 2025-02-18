@@ -196,3 +196,34 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - Creating a panic
     - Use panic()
     - typically pass and error (that led to the panic) as an argument to panic()
+
+## Modules & Packages
+### Module
+- Code that need to be versioned and deployed together
+- Typically, a module is a folder with "go.mod" file
+- go.mod file is the manifest file of the module
+    - name
+        - should include the complete repo path
+    - go version
+    - dependencies
+#### Create a module
+```shell
+go mod init [module_name]
+```
+#### To run a module
+```shell
+go run .
+```
+
+### To create a build
+```shell
+go build .
+```
+
+### Package
+- Internal organization of a module
+- Typically folders
+- Can be nested
+- All the files in a package are considered to be one single entity
+- Public entities should have their names starting in uppercase
+
