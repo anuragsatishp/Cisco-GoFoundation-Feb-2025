@@ -66,8 +66,17 @@ func main() {
 	productPtr = &product
 	// Accessing members of a struct pointer using "." notation
 	fmt.Println(productPtr.Id)
+
+	fmt.Println("Cost before discount :", product.Cost)
+	fmt.Println("Applying 10% discount")
+	ApplyDiscount( /* ?....? */ )
+	fmt.Println("Cost after discount :", product.Cost)
 }
 
 func Format(p Product) string {
 	return fmt.Sprintf("Id = %d, Name = %q, Cost = %0.2f", p.Id, p.Name, p.Cost)
+}
+
+func ApplyDiscount( /* ? */ ) /* no return values */ {
+	/* apply the given discount on the given product */
 }
