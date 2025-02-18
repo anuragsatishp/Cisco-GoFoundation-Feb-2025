@@ -178,3 +178,4 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
     - append
 ![image](./images/slices.png)
 ### Map
+- Typed collection of key/value pairs
