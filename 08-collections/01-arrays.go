@@ -22,7 +22,7 @@ func main() {
 	// Assignment of an array will result in creating a copy (coz arrays are also values in Go)
 	nos2 := nos
 	nos2[0] = 9999
-	fmt.Printf("nos[0] = %d, nos2 = %d\n", nos[0], nos2[0])
+	fmt.Printf("nos[0] = %d, nos2[0] = %d\n", nos[0], nos2[0])
 
 	// Arrays are compared by value
 	newNos := [5]int{3, 1, 4, 2, 5}
