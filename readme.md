@@ -179,3 +179,12 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ![image](./images/slices.png)
 ### Map
 - Typed collection of key/value pairs
+
+## Error handling
+- errors are values "returned" from a function
+- Even though any value (int, string etc) can be used to represent errors, by convention, error values in Go should implement "error" interface
+- Creating an error
+    - Factory functions
+        - errors.New()
+        - fmt.Errorf()
+    - Custom types that implement "error" interface
