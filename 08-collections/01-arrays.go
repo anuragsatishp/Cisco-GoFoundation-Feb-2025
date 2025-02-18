@@ -31,14 +31,24 @@ func main() {
 	// Use pointers to create references
 	var nosPtr *[5]int
 	nosPtr = &nos
+
+	// this works! (but not needed)
 	// fmt.Println((*nosPtr)[0])
+
+	// No need to derefence to access the members through a pointer to an array
 	fmt.Println(nosPtr[0])
 
 	fmt.Println("Array sort")
-	sort( /* ? */ )
+	sort(&nos)
 	fmt.Println(nos)
 }
 
-func sort( /* ? */ ) /* no return values */ {
-	// implement bubble sort
+func sort(list *[5]int) /* no return values */ {
+	for i := 0; i < 4; i++ {
+		for j := i + 1; j < 5; j++ {
+			if list[i] > list[j] {
+				list[i], list[j] = list[j], list[i]
+			}
+		}
+	}
 }
