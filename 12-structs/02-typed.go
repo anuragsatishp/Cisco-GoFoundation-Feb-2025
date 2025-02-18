@@ -8,6 +8,14 @@ type Product struct {
 	Cost float64
 }
 
+func NewProduct(id int, name string, cost float64) *Product {
+	return &Product{
+		Id:   id,
+		Name: name,
+		Cost: cost,
+	}
+}
+
 func main() {
 	/* product = id, name, cost */
 	/*
@@ -69,14 +77,18 @@ func main() {
 
 	fmt.Println("Cost before discount :", product.Cost)
 	fmt.Println("Applying 10% discount")
-	ApplyDiscount( /* ?....? */ )
+	ApplyDiscount(&product, 10)
 	fmt.Println("Cost after discount :", product.Cost)
+
+	pp := NewProduct(200, "Pencil", 5)
+	fmt.Println(pp)
 }
 
 func Format(p Product) string {
 	return fmt.Sprintf("Id = %d, Name = %q, Cost = %0.2f", p.Id, p.Name, p.Cost)
 }
 
-func ApplyDiscount( /* ? */ ) /* no return values */ {
+func ApplyDiscount(p *Product, discountPercentage float64) /* no return values */ {
 	/* apply the given discount on the given product */
+	p.Cost = p.Cost * ((100 - discountPercentage) / 100)
 }
