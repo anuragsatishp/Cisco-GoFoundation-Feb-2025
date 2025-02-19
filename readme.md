@@ -278,3 +278,35 @@ go run -race [filename.go]
 ```shell
 go build -race [filename.go]
 ```
+
+### Channels
+- Share memory by communicating
+- Data typed designed to enable concurrent safe communication between goroutines
+#### Declaration
+```go
+var [var_name] chan [data_type]
+// ex:
+var ch chan int
+```
+#### Initialization
+```go
+ch = make(chan int)
+```
+#### Declaration & Initialization
+```go
+var ch chan int = make(chan int)
+// OR
+var ch = make(chan int)
+// OR
+ch := make(chan int)
+```
+#### Communication
+- Using the channel operator ( <- )
+##### Send Operation
+```go
+ch <- 100
+```
+##### Receive Operation
+```go
+<- ch
+```
