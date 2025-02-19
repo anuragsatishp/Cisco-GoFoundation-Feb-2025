@@ -21,7 +21,10 @@ func main() {
 	// x = "Laboris in proident aute eiusmod aliquip labore esse laborum cupidatat eiusmod duis id."
 	// x = getValue()
 
-	// not safe
+	// will not work
+	// y := x * 2
+
+	// works but not safe
 	// y := x.(int) * 2
 
 	// safe (type assertion)
