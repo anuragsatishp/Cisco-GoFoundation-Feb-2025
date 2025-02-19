@@ -61,11 +61,21 @@ func (s Square) Area() float64 {
 }
 
 /* Ver3.0 */
-/*
-.
-.
-.
-*/
+func (c Circle) Perimeter() float64 {
+	return 2 * math.Pi * c.Radius
+}
+
+func (r Rectangle) Perimeter() float64 {
+	return 2 * (r.Height + r.Width)
+}
+
+func (s Square) Perimeter() float64 {
+	return 4 * s.Side
+}
+
+func PrintPerimeter(x interface{ Perimeter() float64 }) {
+	fmt.Println("Perimeter :", x.Perimeter())
+}
 
 func main() {
 	c := Circle{Radius: 12}
