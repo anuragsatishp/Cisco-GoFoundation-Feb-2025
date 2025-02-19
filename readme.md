@@ -269,3 +269,12 @@ go mod why [package-name]
 ### WaitGroup
 - Semaphore based counter
 - Has the ability to block the execution of a function until the counter becomes 0
+
+### Data Race
+#### Detecting data races
+```shell
+go run -race [filename.go]
+```
+```shell
+go build -race [filename.go]
+```
