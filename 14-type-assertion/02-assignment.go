@@ -3,7 +3,10 @@ Hint : use strconv.Atoi() to convert string to int
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println(sum(10))                                            //=> 10
@@ -18,11 +21,25 @@ func main() {
 	fmt.Println(sum())                                              //=> 0
 }
 
-func sum(nos ...int) int {
-	fmt.Println("[sum] # of operands :", len(nos))
+func sum(list ...any) int {
 	var result int
-	for i := 0; i < len(nos); i++ {
-		result += nos[i]
+	for _, x := range list {
+		switch val := x.(type) {
+		case int:
+			result += val
+		case string:
+			if no, err := strconv.Atoi(val); err == nil {
+				result += no
+			}
+		case []int:
+			var anyList []any
+			for _, item := range val {
+				anyList = append(anyList, item)
+			}
+			result += sum(anyList...)
+		case []any:
+			result += sum(val...)
+		}
 	}
 	return result
 }
