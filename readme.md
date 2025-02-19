@@ -52,6 +52,9 @@
         - "<-" operator (channel)
         - "range" construct
         - "select-case" construct
+    - Standard Library Support
+        - "sync" package
+        - "sync/atomic" package
 
 ## Compile 
 ```shell
@@ -256,3 +259,13 @@ go mod why [package-name]
 - All the files in a package are considered to be one single entity
 - Public entities should have their names starting in uppercase
 
+## Concurrency
+### Thread Based Concurrency Model
+![image](./images/OS-Thread-Based-Concurrency.png)
+
+### GoConcurrency Model
+![image](./images/Go-Concurrency.png)
+
+### WaitGroup
+- Semaphore based counter
+- Has the ability to block the execution of a function until the counter becomes 0
